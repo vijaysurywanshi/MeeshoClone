@@ -1,0 +1,44 @@
+/* Dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none; /* Hidden by default */
+}
+
+.nav-item.dropdown:hover .dropdown-toggle {
+  color: #ff3f6c; /* Optional: change color on hover */
+}
+
+/* Optional: Change link color when hovering over the dropdown */
+.nav-item.dropdown:hover .nav-link {
+  color: #ff3f6c;
+}
+
+/* Optional: Add transition for a smoother effect */
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+
+/* Navbar background color for smaller screens */
+@media (max-width: 991px) {
+  .navbar {
+    background-color: #ffffff; /* Ensure a background color is set */
+    z-index: 999; /* Ensure it stays on top of other content */
+  }
+  
+  /* If navbar is fixed, adjust body padding */
+  body {
+    padding-top: 56px; /* Adjust according to the navbar height */
+  }
+}
+
+
